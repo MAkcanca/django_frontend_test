@@ -7,6 +7,7 @@ class BlogPost(models.Model):
 
     title = models.CharField(_("Title"), max_length=50)
     date = models.DateTimeField()
+    short_description = models.CharField(_("Short Description"), max_length=150, blank=True, null=True)
     content = models.TextField()
 
     class Meta:
