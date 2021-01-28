@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Django</title>
+        <link rel="stylesheet" type="text/css" href='{% static "custom.css" %}'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <a href="#">
+                    <div class="logo">
+                        LOGO
+                    </div>
+                </a>
+                <div>
+                    <button class="btn"><i class="fa fa-plus-square"></i></button>
+                    <button class="btn"><i class="fa fa-share-square"></i></button>
+                    <button class="btn"><i class="fa fa-user-circle"></i></button>
+                    <button class="btn"><i class="fa fa-bell"></i></button>
+                </div>
+                <ul>
+                    <li><a href=#>Homepage</a></li>
+                    <li><a href=#>Pricing</a></li>
+                    <li><a href=#>Contact</a></li>
+                    <a href="#" id="menu-icon"></a>
+                </ul>
+            </nav>
+            <div class="bodycontent">
+                <h2>Blog</h2>
+                <div class="row">
+                    {% for post in posts %}
+                    <div class="example-1 card">
+                        <div class="wrapper">
+                            <div class="data">
+                                <div class="content">
+                                    <h3 class="title"><a href="#">{{post.title}}</a></h1>
+                                    <p class="text">View</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="flex-center">
+                    <button class="primaryButton">PRIMARY</button>
+                    <span style="margin-left: 10px; color: #bababa;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nec nibh ac facilisis. Fusce dignissim lorem sed laoreet tempus. Quisque non ultricies tellus, vitae tincidunt est.</span>
+                </div>
+                <div class="flex">
+                    <div>
+                        <div class="form-checkbox">
+                            <input class="checkbox" type="checkbox" id="checkbox1">
+                            <label for="checkbox1" tabindex="1">Lorem Ipsum</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input class="checkbox" type="checkbox" id="checkbox2" checked="checked">
+                            <label for="checkbox2" tabindex="2">Lorem Ipsum</label>
+                        </div>
+                        <div class="form-radio">
+                            <input class="radiobutton" type="radio" id="radio1">
+                            <label for="radio1" tabindex="3">Lorem Ipsum</label>
+                        </div>
+                        <div class="form-radio">
+                            <input class="radiobutton" type="radio" id="radio2" checked="checked">
+                            <label for="radio2" tabindex="4">Lorem Ipsum</label>
+                        </div>
+                    </div>
+                    <div class="imageicon">
+                        <i class="fa fa-image"></i>
+                    </div>
+                    <div class="imageicon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div style="width:26%; color:#bababa">
+                    <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nec nibh ac facilisis. Fusce dignissim lorem sed laoreet tempus. Quisque non ultricies tellus, vitae tincidunt est.
+
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
